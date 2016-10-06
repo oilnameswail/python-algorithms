@@ -1,11 +1,10 @@
 import re
 import sys
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Sep 25 21:34:22 2016
 
-@author: ameliawilson
-"""
+'''
+Practicing Array and String manipulation/algorithms
+Source of some problems:  Cracking The Coding Interview
+'''
 
 def main():
     '''
