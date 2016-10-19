@@ -3,7 +3,6 @@ import sys
 
 '''
 Practicing Array and String manipulation/algorithms
-Source of some problems:  Cracking The Coding Interview
 '''
 
 def main():
@@ -414,53 +413,5 @@ def zero_matrix():
         print('  '.join(str(matrix[x][y]) for x in range(4)))
     print('-------------------------------')
     
-
-###############################################################################
-# (9) String Rotation: Assume you have a method isSubstring which checks if   #
-#     one word is a substring of the other. Given 2 strings, s1 and s2, write #
-#     code to check if s2 is a rotation of s1 using only one call to          #
-#     isSubstring (e.g., 'waterbottle' is a rotation of 'erbottlewat')        #
-###############################################################################  
-
-
-
-
-
-###############################################################################
-# (A)  QUICK SORT OF STRINGS                                                  #
-###############################################################################
-
-def quick_sort_string(string):
-    string_array = list(string)
-    start = 0;
-    end = len(string_array) - 1
-    quick_sort_string_array(string_array, start, end) 
-    return ''.join(string_array)
-
-def quick_sort_string_array(string_array, start, end):
-    if start <= end:
-        i = start
-        j = end
-        p = start + (end - start) / 2
-        while i <= j:
-            while (string_array[i] < string_array[p]):
-                i+=1
-            while (string_array[j] > string_array[p]):
-                j-=1
-            if i <= j:
-                exchange_string_characters(string_array, i, j)
-                i+=1
-                j-=1
-            if start < j:
-                quick_sort_string_array(string_array, start, j)
-            if end > i:
-                quick_sort_string_array(string_array, i, end)
-    
-            
-def exchange_string_characters(string_array, i, j):
-    temp = string_array[i]
-    string_array[i] = string_array[j]
-    string_array[j] = temp
-
 
 main()
